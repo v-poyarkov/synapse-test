@@ -1,0 +1,16 @@
+// Шрифты
+
+@font-face {
+    font-family: 'Officina Serif C';
+    src: url('../fonts/OfficinaSerifC-Bold.woff2') format('woff2'),
+         url('../fonts/OfficinaSerifC-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+     font-family: 'Officina Serif C normal';
+     src: url('../fonts/OfficinaSerifC-Bold.woff2') format('woff2'),
+          url('../fonts/OfficinaSerifC-Bold.woff') format('woff');
+      font-style: normal;
+   }

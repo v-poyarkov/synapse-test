@@ -1,0 +1,336 @@
+.page-header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  background-image: url("../img/headerMenuSmallBg.jpg");
+  background-color: #492b10;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding: 8px 9px;
+  width: 100%;
+  z-index: 15;
+}
+
+.page-header--active {
+  background-image: url("../img/headerMenuBigBg.jpg");
+}
+
+.page-header__logo {
+  width: 61px;
+  height: 65px;
+  outline: none;
+}
+
+.page-header__btn {
+  position: absolute;
+  top: 31px;
+  right: 31px;
+  display: block;
+  width: 26px;
+  height: 22px;
+  background-color: transparent;
+}
+
+.page-header__btn span,
+.page-header__btn span::before,
+.page-header__btn span::after {
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.page-header__btn span::before,
+.page-header__btn span::after {
+  content: "";
+  display: block;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.page-header__btn span::before {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.page-header__btn span::after {
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+.page-header__btn--active span {
+  height: 0;
+}
+
+.page-header__btn--active span::before {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.page-header__btn--active span::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+
+.header-nav__list {
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0;
+  list-style: none;
+  font-family: "Officina Serif C";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.2px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 400px;
+  display: none;
+}
+
+.page-header__contacts {
+  color: #fefefe;
+  text-align: center;
+  margin-top: auto;
+}
+
+.page-header__tel {
+  font-family: "Officina Serif C";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 18.19px;
+  display: block;
+  margin-bottom: 13px;
+}
+
+.page-header__worktime {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 13px;
+  display: block;
+  margin-bottom: 35px;
+}
+
+.page-header__callback {
+  color: #fefefe;
+  font-family: "Officina Serif C";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.19px;
+  text-transform: uppercase;
+}
+
+.header-nav__list--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-nav__item a {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .page-header {
+    left: 0;
+    width: 83px;
+    height: 100vh;
+    background-image: url("../img/headerMenuTabSmall.jpg");
+    padding: 14px 7px;
+  }
+
+  .page-header--active {
+    background-image: url("../img/headerMenuTabBig.jpg");
+    width: 209px;
+  }
+
+  .page-header__logo {
+    width: 70px;
+    height: 74px;
+  }
+
+  .page-header--active .page-header__logo {
+    width: 107px;
+    height: 113px;
+    margin-top: 12px;
+    margin-left: 40px;
+  }
+
+  .page-header__btn {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .page-header__btn::after {
+    content: "Меню";
+    position: absolute;
+    color: #fff;
+    top: 30px;
+    left: -5px;
+    font-family: "Officina Serif C";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  .page-header--active .page-header__btn {
+    top: 10px;
+    left: 180px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .page-header--active .page-header__btn::after {
+    display: none;
+  }
+
+  .header-nav__list {
+    padding-top: 0px;
+    margin-top: 52px;
+    padding-left: 34px;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    min-height: 265px;
+  }
+
+  .page-header--active .page-header__contacts {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page-header {
+    width: 220px;
+    background-image: url("../img/headerMenuTabBig.jpg");
+    padding: 29px 36px 20px 25px;
+  }
+
+  .page-header__logo {
+    width: 159px;
+    height: 167px;
+    position: relative;
+  }
+
+  .page-header__logo::after {
+    content: "Качество, проверенное поколениями";
+    position: absolute;
+    color: #fff;
+    font-family: "Officina Serif C";
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+    bottom: -80px;
+    left: 0;
+    text-align: center;
+  }
+
+  .page-header__btn {
+    display: none;
+  }
+
+  .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 180px;
+    padding-left: 10px;
+    padding-bottom: 0;
+  }
+
+  .page-header__contacts.hidden-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 1330px) {
+  .page-header {
+    width: 262px;
+    padding: 29px 55px 80px 48px;
+  }
+}
+
+.page-main {
+  margin-top: 80px;
+  padding-top: 25px;
+}
+
+.page-main__breadcrumbs {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.page-main__breadcrumbs li {
+  margin-right: 35px;
+  position: relative;
+}
+
+.page-main__breadcrumbs li:first-child::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 5px;
+  background-image: url(../img/bredcrumbsArrow.png);
+  top: 12px;
+  right: -25px;
+}
+
+.page-main__breadcrumbs a {
+  color: #1c1c1c;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 29.98px;
+}
+
+.page-main__title {
+  padding: 0;
+  margin: 0;
+  margin-left: 18px;
+  margin-bottom: 22px;
+  color: #503314;
+  font-family: "Officina Serif C";
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+}

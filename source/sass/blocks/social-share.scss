@@ -1,0 +1,72 @@
+.social {
+  margin-top: 34px;
+  padding-left: 9px;
+}
+
+.social__share {
+  color: #343434;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.social__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 15px;
+}
+
+.social__button {
+  display: block;
+  width: 37px;
+  height: 37px;
+  margin-right: 12px;
+}
+
+.social__button:hover {
+  cursor: pointer;
+}
+
+.vk-button {
+  background-image: url("../img/vk.png");
+  background-repeat: no-repeat;
+}
+
+.ok-button {
+  background-image: url("../img/ok.png");
+  background-repeat: no-repeat;
+}
+
+.fb-button {
+  background-image: url("../img/fb.png");
+  background-repeat: no-repeat;
+}
+
+.social__count {
+  display: block;
+  width: 57px;
+  height: 41px;
+  border-radius: 35px;
+  color: #b2b2b2;
+  font-size: 14px;
+  line-height: 41px;
+  background-color: #e8e8e8;
+  text-align: center;
+  position: relative;
+}
+
+.social__count::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -12px;
+  border: 7px solid transparent;
+  border-right: 7px solid #efefef;
+}
